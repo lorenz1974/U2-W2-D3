@@ -8,5 +8,9 @@
 }
 
 @mixin title-big {
+  font-weight: bold;
   font-size: 4rem;
+  &:hover {
+    text-shadow: 3px 3px map.get($colours, 'btn2');
+  }
 }

@@ -853,6 +853,9 @@ nav img {
   font-size: 4rem;
   animation: fade-slide 1s 0s both;
 }
+#headline-text h1:hover {
+  text-shadow: 3px 3px #ff8700;
+}
 @keyframes fade-slide {
   from {
     opacity: 0;
