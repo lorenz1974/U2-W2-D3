@@ -1,0 +1,17 @@
+$colours: (
+  pri: #f4f4f4,
+  sec: #191919,
+  btn1: #0e6cff,
+  btn2: #ff8700,
+  btn3: #4caf50,
+  hero: #640fc5,
+);
+
+@each $name, $colour in $colours {
+  .cl-#{$name} {
+    color: $colour;
+  }
+  .bg-#{$name} {
+    background-color: $colour;
+  }
+}

@@ -1,0 +1,36 @@
+$edges: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+
+@each $width in $widths-percent {
+  .w-#{$width} {
+    width: #{$width * 1%};
+  }
+}
+
+@each $n in $num0To10 {
+  .m-#{$n} {
+    margin: #{$n * 0.25}rem;
+  }
+  .p-#{$n} {
+    padding: #{$n * 0.25}rem;
+  }
+  .m-il-#{$n} {
+    margin: #{$n * 0.25}rem;
+  }
+  .p-il-#{$n} {
+    padding: #{$n * 0.25}rem;
+  }
+
+  @each $edge, $direction in $edges {
+    .m#{$edge}-#{$n} {
+      margin-#{$direction}: #{$n * 0.25}rem;
+    }
+    .p#{$edge}-#{$n} {
+      padding-#{$direction}: #{$n * 0.25}rem;
+    }
+  }
+}

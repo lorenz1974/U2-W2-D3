@@ -1,0 +1,7 @@
+button {
+  width: 10rem;
+  height: 3rem;
+  padding: 3rem;
+
+  @include floating();
+}

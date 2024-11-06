@@ -1,0 +1,8 @@
+@mixin floating {
+  border: 0px solid transparent;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 3px 3px lightblue;
+  }
+}

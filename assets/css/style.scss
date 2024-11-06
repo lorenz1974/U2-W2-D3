@@ -1,0 +1,112 @@
+@use 'sass:map';
+
+@import './scss/partials/reset';
+@import './scss/partials/variabili';
+@import './scss/partials/mixins';
+@import './scss/partials/spaziature';
+@import './scss/partials/fonts';
+@import './scss/partials/colori';
+@import './scss/partials/bottoni';
+@import './scss/partials/animazioni';
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: map.get($colours, 'hero');
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    li {
+      margin: 0 10px;
+      a {
+        text-decoration: none;
+        color: map.get($colours, 'pri');
+        font-weight: bold;
+        &:hover {
+          color: map.get($colours, 'sec');
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+#headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: map.get($colours, 'pri');
+}
+#headline-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: map.get($colours, 'pri');
+  line-height: 2rem;
+  h1 {
+    font-weight: bold;
+    @include animation(-500px, 0, 1s, 0s);
+  }
+  p {
+    @include animation(-500px, 0, 1s, 1s);
+  }
+}
+
+#headline-image {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 400px;
+    @include floating();
+    @include animation(-500px, 0, 1s, 2s);
+  }
+}
+
+#buttons {
+  margin-top: 2rem;
+  @include animation(-500px, 0, 1s, 3s);
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  .grid-item {
+    flex: 1 1 calc(25% - 20px); // Ogni elemento occupa il 25% meno la gap (20px)
+    background-color: map.get($colours, 'pri');
+    padding: 20px;
+    text-align: center;
+    @include floating();
+    h2 {
+      color: map.get($colours, 'hero');
+      font-weight: bold;
+    }
+  }
+}

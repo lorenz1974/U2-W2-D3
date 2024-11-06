@@ -1,0 +1,14 @@
+@mixin animation($start-y: -100px, $end-y: 0, $duration: 1s, $delay: 0s) {
+  animation: fade-slide $duration $delay both;
+
+  @keyframes fade-slide {
+    from {
+      opacity: 0;
+      transform: translateY($start-y);
+    }
+    to {
+      opacity: 1;
+      transform: translateY($end-y);
+    }
+  }
+}
