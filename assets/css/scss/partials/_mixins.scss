@@ -6,3 +6,7 @@
     box-shadow: 3px 3px lightblue;
   }
 }
+
+@mixin title-big {
+  font-size: 4rem;
+}

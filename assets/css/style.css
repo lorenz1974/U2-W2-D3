@@ -850,6 +850,7 @@ nav img {
 }
 #headline-text h1 {
   font-weight: bold;
+  font-size: 4rem;
   animation: fade-slide 1s 0s both;
 }
 @keyframes fade-slide {

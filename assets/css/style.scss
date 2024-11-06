@@ -71,6 +71,7 @@ nav {
   line-height: 2rem;
   h1 {
     font-weight: bold;
+    @include title-big;
     @include animation(-500px, 0, 1s, 0s);
   }
   p {
